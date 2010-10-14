@@ -10,10 +10,14 @@ module Highrise
       case method.to_s
       when /^find_(all_)?by_([_a-zA-Z]\w*)$/
         raise ArgumentError, "Dynamic finder method must take an argument." if args.empty?
+        options = args.extract_options!
+        
+        # If the resource is pageable, use the paging find instead
+        resources = respond_to?("find_all_across_pages") ? send(:"find_all_across_pages", options) : send(:"find", :all)
         if $1 == 'all_'
-          return send(:"find", :all).select { |container| container.send($2) == args.first }
+          return resources.select { |container| container.send($2) == args.first }
         else
-          return send(:"find", :all).detect { |container| container.send($2) == args.first }
+          return resources.detect { |container| container.send($2) == args.first }
         end
       else
         super
