@@ -5,6 +5,7 @@ $:.unshift(File.dirname(__FILE__))
 require 'highrise/base'
 require 'highrise/pagination'
 require 'highrise/taggable'
+require 'highrise/searchable'
 require 'highrise/subject'
 require 'highrise/comment'
 require 'highrise/company'
