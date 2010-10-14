@@ -1,8 +1,5 @@
-require File.dirname(__FILE__) + '/../cachable'
-
 module Highrise
   class Base < ActiveResource::Base
-    include ::Cachable
 
     protected
     # Dynamic finder for attributes
@@ -11,7 +8,7 @@ module Highrise
       when /^find_(all_)?by_([_a-zA-Z]\w*)$/
         raise ArgumentError, "Dynamic finder method must take an argument." if args.empty?
         options = args.extract_options!
-        
+
         # If the resource is pageable, use the paging find instead
         resources = respond_to?("find_all_across_pages") ? send(:"find_all_across_pages", options) : send(:"find", :all)
         if $1 == 'all_'
