@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{highrise}
-  s.version = "2.0.1"
+  s.version = "2.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Marcos Tapaj\303\263s", "Ken Mayer"]
-  s.date = %q{2010-08-25}
+  s.date = %q{2010-10-18}
   s.description = %q{
 Based on the original API module from DHH, http://developer.37signals.com/highrise/, this
 gem is a cleaned up, tested version of the same. Contributors have added support for tags 
@@ -45,23 +45,29 @@ Highrise::Base.user = 'your_api_auth_token'
      "lib/highrise/comment.rb",
      "lib/highrise/company.rb",
      "lib/highrise/deal.rb",
+     "lib/highrise/deal_category.rb",
      "lib/highrise/email.rb",
      "lib/highrise/group.rb",
      "lib/highrise/kase.rb",
      "lib/highrise/membership.rb",
      "lib/highrise/note.rb",
      "lib/highrise/pagination.rb",
+     "lib/highrise/party.rb",
      "lib/highrise/person.rb",
+     "lib/highrise/recording.rb",
+     "lib/highrise/searchable.rb",
      "lib/highrise/subject.rb",
      "lib/highrise/tag.rb",
      "lib/highrise/taggable.rb",
      "lib/highrise/task.rb",
+     "lib/highrise/task_category.rb",
      "lib/highrise/user.rb",
      "spec/cachable_spec.rb",
      "spec/highrise/account_spec.rb",
      "spec/highrise/base_spec.rb",
      "spec/highrise/comment_spec.rb",
      "spec/highrise/company_spec.rb",
+     "spec/highrise/deal_category_spec.rb",
      "spec/highrise/deal_spec.rb",
      "spec/highrise/email_spec.rb",
      "spec/highrise/group_spec.rb",
@@ -69,9 +75,13 @@ Highrise::Base.user = 'your_api_auth_token'
      "spec/highrise/membership_spec.rb",
      "spec/highrise/note_spec.rb",
      "spec/highrise/pagination_spec.rb",
+     "spec/highrise/party_spec.rb",
      "spec/highrise/person_spec.rb",
+     "spec/highrise/recording_spec.rb",
+     "spec/highrise/searchable_spec.rb",
      "spec/highrise/subject_spec.rb",
      "spec/highrise/tag_spec.rb",
+     "spec/highrise/task_category_spec.rb",
      "spec/highrise/task_spec.rb",
      "spec/highrise/user_spec.rb",
      "spec/spec.opts",
@@ -89,6 +99,7 @@ Highrise::Base.user = 'your_api_auth_token'
      "spec/highrise/base_spec.rb",
      "spec/highrise/comment_spec.rb",
      "spec/highrise/company_spec.rb",
+     "spec/highrise/deal_category_spec.rb",
      "spec/highrise/deal_spec.rb",
      "spec/highrise/email_spec.rb",
      "spec/highrise/group_spec.rb",
@@ -96,9 +107,13 @@ Highrise::Base.user = 'your_api_auth_token'
      "spec/highrise/membership_spec.rb",
      "spec/highrise/note_spec.rb",
      "spec/highrise/pagination_spec.rb",
+     "spec/highrise/party_spec.rb",
      "spec/highrise/person_spec.rb",
+     "spec/highrise/recording_spec.rb",
+     "spec/highrise/searchable_spec.rb",
      "spec/highrise/subject_spec.rb",
      "spec/highrise/tag_spec.rb",
+     "spec/highrise/task_category_spec.rb",
      "spec/highrise/task_spec.rb",
      "spec/highrise/user_spec.rb",
      "spec/spec_helper.rb",
